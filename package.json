@@ -1,0 +1,23 @@
+{
+  "name": "zookeepr",
+  "version": "1.0.0",
+  "description": "A register of animal identification and maintenance.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/msdale/zookeepr.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/msdale/zookeepr/issues"
+  },
+  "homepage": "https://github.com/msdale/zookeepr#readme",
+  "dependencies": {
+    "express": "^4.17.2"
+  }
+}
