@@ -1,0 +1,45 @@
+2021-12-28T16:04:45.990039+00:00 app[api]: Initial release by user msdaledad@gmail.com
+2021-12-28T16:04:45.990039+00:00 app[api]: Release v1 created by user msdaledad@gmail.com
+2021-12-28T16:04:50.480547+00:00 app[api]: Enable Logplex by user msdaledad@gmail.com
+2021-12-28T16:04:50.480547+00:00 app[api]: Release v2 created by user msdaledad@gmail.com
+2021-12-28T16:05:24.000000+00:00 app[api]: Build started by user msdaledad@gmail.com
+2021-12-28T16:05:36.653916+00:00 app[api]: Deploy 26a60fc8 by user msdaledad@gmail.com
+2021-12-28T16:05:36.653916+00:00 app[api]: Release v3 created by user msdaledad@gmail.com
+2021-12-28T16:05:36.670792+00:00 app[api]: Scaled to web@1:Free by user msdaledad@gmail.com
+2021-12-28T16:05:37.000000+00:00 app[api]: Build succeeded
+2021-12-28T16:05:38.738058+00:00 heroku[web.1]: Starting process with command `npm start`
+2021-12-28T16:05:39.659527+00:00 app[web.1]: 
+2021-12-28T16:05:39.659540+00:00 app[web.1]: > zookeepr@1.0.0 start /app
+2021-12-28T16:05:39.659540+00:00 app[web.1]: > node server.js
+2021-12-28T16:05:39.659540+00:00 app[web.1]: 
+2021-12-28T16:05:39.768035+00:00 app[web.1]: API server not on port 3001!
+2021-12-28T16:06:39.252443+00:00 heroku[web.1]: Error R10 (Boot timeout) -> Web process failed to bind to $PORT within 60 seconds of launch
+2021-12-28T16:06:39.309198+00:00 heroku[web.1]: Stopping process with SIGKILL
+2021-12-28T16:06:39.327213+00:00 app[web.1]: Error waiting for process to terminate: No child processes
+2021-12-28T16:06:39.461831+00:00 heroku[web.1]: Process exited with status 22
+2021-12-28T16:06:39.743527+00:00 heroku[web.1]: State changed from starting to crashed
+2021-12-28T16:06:39.751249+00:00 heroku[web.1]: State changed from crashed to starting
+2021-12-28T16:06:41.465031+00:00 heroku[web.1]: Starting process with command `npm start`
+2021-12-28T16:06:42.471128+00:00 app[web.1]: 
+2021-12-28T16:06:42.471142+00:00 app[web.1]: > zookeepr@1.0.0 start /app
+2021-12-28T16:06:42.471142+00:00 app[web.1]: > node server.js
+2021-12-28T16:06:42.471142+00:00 app[web.1]: 
+2021-12-28T16:06:42.570273+00:00 app[web.1]: API server not on port 3001!
+2021-12-28T16:07:41.780072+00:00 heroku[web.1]: Error R10 (Boot timeout) -> Web process failed to bind to $PORT within 60 seconds of launch
+2021-12-28T16:07:41.815228+00:00 heroku[web.1]: Stopping process with SIGKILL
+2021-12-28T16:07:41.968457+00:00 heroku[web.1]: Process exited with status 137
+2021-12-28T16:07:42.053886+00:00 heroku[web.1]: State changed from starting to crashed
+2021-12-28T16:11:30.000000+00:00 app[api]: Build started by user msdaledad@gmail.com
+2021-12-28T16:11:42.000000+00:00 app[api]: Build succeeded
+2021-12-28T16:11:42.522520+00:00 app[api]: Deploy 6bc39cbc by user msdaledad@gmail.com
+2021-12-28T16:11:42.522520+00:00 app[api]: Release v4 created by user msdaledad@gmail.com
+2021-12-28T16:11:45.834467+00:00 heroku[web.1]: State changed from crashed to starting
+2021-12-28T16:11:48.558030+00:00 heroku[web.1]: Starting process with command `npm start`
+2021-12-28T16:11:50.664281+00:00 app[web.1]: 
+2021-12-28T16:11:50.664308+00:00 app[web.1]: > zookeepr@1.0.0 start /app
+2021-12-28T16:11:50.664309+00:00 app[web.1]: > node server.js
+2021-12-28T16:11:50.664309+00:00 app[web.1]: 
+2021-12-28T16:11:50.957448+00:00 app[web.1]: API server now on port 33332!
+2021-12-28T16:11:51.349733+00:00 heroku[web.1]: State changed from starting to up
+2021-12-28T16:12:27.076631+00:00 heroku[router]: at=info method=GET path="/" host=msdale-zookeepr.herokuapp.com request_id=166c894b-0d8e-4a72-9450-be6f8554e061 fwd="107.77.253.62" dyno=web.1 connect=0ms service=28ms status=404 bytes=383 protocol=https
+2021-12-28T16:12:38.732915+00:00 heroku[router]: at=info method=GET path="/" host=msdale-zookeepr.herokuapp.com request_id=6208af0c-64ec-4ffe-a243-262c293c62b5 fwd="107.77.253.62" dyno=web.1 connect=0ms service=5ms status=404 bytes=383 protocol=https
