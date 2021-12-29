@@ -111,6 +111,17 @@ app.post('/api/animals', (req, res) => {
 });
 
 
+/**
+ * Serve up some HTML for the client
+ */
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, './public/index.html'));
+});
+
+
+/**
+ * Start the app listening for requests in the PORT address.
+ */
 app.listen(PORT, () => {
   console.log(`API server now on port ${PORT}!`);
 });
