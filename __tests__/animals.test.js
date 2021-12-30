@@ -1,85 +1,79 @@
-const fs = require("fs");
-const {
-  filterByQuery,
-  findById,
-  createNewAnimal,
-  validateAnimal
-} = require("../lib/animals");
-const { animals } = require("../data/animals");
+const fs = require('fs');
+const { filterByQuery, findById, createNewAnimal, validateAnimal } = require('../lib/animals.js');
+const { animals } = require('../data/animals');
 
+test('creates an animal object', () => {
+  const animal = createNewAnimal({ name: 'Darlene', id: 'jhgdja3ng2' }, animals);
 
-jest.mock('fs');
-test("create an animal object", () => {
-  const animal = createNewAnimal(
-    { name: "Darlene", id: "jg87kdk" }, animals
-  );
-
-  expect(animal.name).toBe("Darlene");
-  expect(animal.id).toBe("jg87kdk");
+  expect(animal.name).toBe('Darlene');
+  expect(animal.id).toBe('jhgdja3ng2');
 });
 
-test("filters by query", () => {
+test('filters by query', () => {
   const startingAnimals = [
     {
-      id: "3",
-      name: "Erica",
-      species: "gorilla",
-      diet: "omnivore",
-      personalityTraits: ["quirky", "rash"],
+      id: '3',
+      name: 'Erica',
+      species: 'gorilla',
+      diet: 'omnivore',
+      personalityTraits: ['quirky', 'rash']
     },
     {
-      id: "4",
-      name: "Noel",
-      species: "bear",
-      diet: "carnivore",
-      personalityTraits: ["impish", "sassy", "brave"],
+      id: '4',
+      name: 'Noel',
+      species: 'bear',
+      diet: 'carnivore',
+      personalityTraits: ['impish', 'sassy', 'brave']
     }
   ];
 
-  const filteredAnimals = filterByQuery({ species: "gorilla" }, startingAnimals);
-  expect(filteredAnimals.length).toEqual(1);
+  const updatedAnimals = filterByQuery({ species: 'gorilla' }, startingAnimals);
+
+  expect(updatedAnimals.length).toEqual(1);
 });
 
-test("find animal by id", () => {
+test('finds by id', () => {
   const startingAnimals = [
     {
-      id: "3",
-      name: "Erica",
-      species: "gorilla",
-      diet: "omnivore",
-      personalityTraits: ["quirky", "rash"],
+      id: '3',
+      name: 'Erica',
+      species: 'gorilla',
+      diet: 'omnivore',
+      personalityTraits: ['quirky', 'rash']
     },
     {
-      id: "4",
-      name: "Noel",
-      species: "bear",
-      diet: "carnivore",
-      personalityTraits: ["impish", "sassy", "brave"],
+      id: '4',
+      name: 'Noel',
+      species: 'bear',
+      diet: 'carnivore',
+      personalityTraits: ['impish', 'sassy', 'brave']
     }
   ];
 
-  const foundAnimal = findById("3", startingAnimals);
-  expect(foundAnimal.name).toBe("Erica");
+  const result = findById('3', startingAnimals);
+
+  expect(result.name).toBe('Erica');
 });
 
-test("validate personality traits", () => {
+test('validates personality traits', () => {
   const animal = {
-    id: "kdkd",
-    name: "JoJo",
-    species: "rabbit",
-    diet: "herbivore",
-    personalityTraits: ["cute", "cuddly"]
-  }; 
+    id: '3',
+    name: 'Erica',
+    species: 'gorilla',
+    diet: 'omnivore',
+    personalityTraits: ['quirky', 'rash']
+  };
+
   const invalidAnimal = {
-    id: "123",
-    name: "Simpson",
-    species: "pig",
-    diet: "omnivore",
-  }; 
+    id: '3',
+    name: 'Erica',
+    species: 'gorilla',
+    diet: 'omnivore'
+  };
 
   const result = validateAnimal(animal);
-  const invalidResult = validateAnimal(invalidAnimal);
+  const result2 = validateAnimal(invalidAnimal);
 
   expect(result).toBe(true);
-  expect(invalidResult).toBe(false);
-})
+  expect(result2).toBe(false);
+});
